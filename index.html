@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Kumbh Sans';
+      font-size: 18px;
+      font-weight: 400;
+      background-color: hsl(185, 75%, 39%);
+
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .profile-card {
+      margin: 1rem;
+      background-color: white;
+      min-width: 20rem;
+      border-radius: 1rem;
+    }
+
+    .profile-card > .card-image {
+      background-image: url('./images/bg-pattern-card.svg');
+      text-align: center;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .profile-card > .card-image > img {
+      padding: 0;
+      border: 0.3rem solid white;
+      border-radius: 100%;
+      background-color: white;
+      transform: translateY(60px);
+    }
+
+    .profile-card > .card-body {
+      margin: 80px 0 20px 0;
+      text-align: center;
+    }
+
+    .profile-card > .card-body > .card-title {
+      font-weight: 700;
+      margin: 0.6rem 0;
+    }
+
+    .profile-card > .card-body > .card-title > span {
+      margin-left: 0.3rem;
+      font-weight: 400;
+    }
+
+    .profile-card > .card-body > .card-subtitle {
+      color: hsl(227, 10%, 46%);
+      font-size: 14px;
+    }
+
+    .profile-card > .card-footer {
+      border-top: 1px solid lightgrey;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5rem 1rem;
+    }
+
+    .profile-card > .card-footer > .card-footer-item {
+      flex: 1 0 0px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .profile-card > .card-footer > .card-footer-item > span {
+      font-weight: 400;
+      color: hsl(0, 0%, 59%);
+      font-size: 12px;
+      margin-top: 0.5rem;
+      letter-spacing: 0.1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <!-- Image -->
+    <div class="card-image">
+      <img src="images/image-victor.jpg">
+    </div>
+    
+    <!-- Card Body -->
+    <div class="card-body">
+      <!-- Card Title -->
+      <div class="card-title">
+        Victor Crest
+        <span>26</span>
+      </div>
+      <!-- Card Subtitle -->
+      <div class="card-subtitle">
+        London
+      </div>
+    </div>
+
+    <!-- Card Footer -->
+    <div class="card-footer">
+      <!-- Col 1 -->
+      <div class="card-footer-item">
+        80K
+        <span>Followers</span>
+      </div>
+      <!-- Col 2 -->
+      <div class="card-footer-item">
+        803K
+        <span>Likes</span>
+      </div>
+      <!-- Col 3 -->
+      <div class="card-footer-item">
+        1.4K
+        <span>Photos</span>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/jmpagella">Juan Martin Pagella</a>.
+  </div>
+</body>
+</html>
