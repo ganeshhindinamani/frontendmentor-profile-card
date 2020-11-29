@@ -25,12 +25,35 @@
       font-size: 18px;
       font-weight: 400;
       background-color: hsl(185, 75%, 39%);
+    }
 
+    .flex {
+      min-height: 100vh;
       align-items: center;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      min-height: 100vh;
+    }
+
+    .bg-img-1, .bg-img-2 {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .bg-img-1 > img, .bg-img-2 img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .bg-img-1 > img {
+      transform: translate(-60%, -50%) scale(1.2);
+    }
+
+    .bg-img-2 {
+      transform: translate(60%, 50%) scale(1.2);
     }
 
     .profile-card {
@@ -38,6 +61,7 @@
       background-color: white;
       min-width: 20rem;
       border-radius: 1rem;
+      box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.4);
     }
 
     .profile-card > .card-image {
@@ -101,50 +125,61 @@
 
 <body>
 
-  <!-- Profile Card -->
-  <div class="profile-card">
-    <!-- Image -->
-    <div class="card-image">
-      <img src="images/image-victor.jpg">
+  
+  <div class="bg-img-1">
+    <img src="images/bg-pattern-top.svg">
+  </div>
+
+  <div class="bg-img-2">
+    <img src="images/bg-pattern-bottom.svg">
+  </div>
+
+  <div class="flex">
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <!-- Image -->
+      <div class="card-image">
+        <img src="images/image-victor.jpg">
+      </div>
+      
+      <!-- Card Body -->
+      <div class="card-body">
+        <!-- Card Title -->
+        <div class="card-title">
+          Victor Crest
+          <span>26</span>
+        </div>
+        <!-- Card Subtitle -->
+        <div class="card-subtitle">
+          London
+        </div>
+      </div>
+
+      <!-- Card Footer -->
+      <div class="card-footer">
+        <!-- Col 1 -->
+        <div class="card-footer-item">
+          80K
+          <span>Followers</span>
+        </div>
+        <!-- Col 2 -->
+        <div class="card-footer-item">
+          803K
+          <span>Likes</span>
+        </div>
+        <!-- Col 3 -->
+        <div class="card-footer-item">
+          1.4K
+          <span>Photos</span>
+        </div>
+      </div>
+
     </div>
     
-    <!-- Card Body -->
-    <div class="card-body">
-      <!-- Card Title -->
-      <div class="card-title">
-        Victor Crest
-        <span>26</span>
-      </div>
-      <!-- Card Subtitle -->
-      <div class="card-subtitle">
-        London
-      </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/jmpagella">Juan Martin Pagella</a>.
     </div>
-
-    <!-- Card Footer -->
-    <div class="card-footer">
-      <!-- Col 1 -->
-      <div class="card-footer-item">
-        80K
-        <span>Followers</span>
-      </div>
-      <!-- Col 2 -->
-      <div class="card-footer-item">
-        803K
-        <span>Likes</span>
-      </div>
-      <!-- Col 3 -->
-      <div class="card-footer-item">
-        1.4K
-        <span>Photos</span>
-      </div>
-    </div>
-
-  </div>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/jmpagella">Juan Martin Pagella</a>.
   </div>
 </body>
 </html>
